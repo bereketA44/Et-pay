@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" >
+    <link rel="preload" as="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./fonts/ArtisticFriend-Regular.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./fonts/Raleway Thin.ttf" crossorigin="anonymous">
+    <link rel="preload" as="font" href="./fonts/hiwua.ttf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/Welcome.css" >
+    <link rel="shortcut icon" type="image/x-icon" href="media/Slogo.PNG" />
+    <title>Welcome To ET-pay</title>
+</head>
+<div class="loader" id="loader">
+    <!-- <h4>ET-Pay Loading</h4> -->
+    <div class="gears">
+        <img class="img-responsive big" src="./media/gears.png" alt="">
+        <img class="img-responsive small" src="./media/gears.png" alt="">
+    </div>
+   
+    <h4 style="margin-left: -20px;">ET-Pay Loading . . . </h4>
+</div>
+<body style="visibility: hidden;">
+    
+    <div class="font_preload" style="opacity: 0">
+        <span style="font-family: 'ArtisticFriend-Regular', Arial, sans-serif;"></span>
+        <span style="font-family: 'Raleway', Arial, sans-serif;"></span>
+        <span style="font-family: 'hiwua', Arial, sans-serif;"></span>
+        <span style="font-family: 'Artistic', Arial, sans-serif;"></span>
+        <span style="font-family: 'fonts_custom;', Arial, sans-serif;"></span>
+        <span style="font-family: 'amahricFonts;', Arial, sans-serif;"></span>
+    </div>
+<nav class="topnavs navbar-fixed-top">
+    <nav class="navbar navbar-bg navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand active">Welcome To ET-pay</a>
+                <a href="JavaScript:Void(0)" class="navbar-toggle" data-target="#to_collapse" data-toggle="collapse" id="toggle">
+                    <!-- <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> -->
+                    <span class="glyphicon glyphicon-list"></span>
+                 </a>
+            </div>
+            <div class="navbar-collapse collapse" id="to_collapse">
+                <ul class="nav nav-tabs nav-justified" >
+                    <li class="" ><a href="JavaScript:Void(0)" id="hometab" onmousedown="jump('services')"
+                    style="cursor: default;"
+                         ><span class="glyphicon glyphicon-home "></span> Home</a></li>
+                    <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-briefcase"></span> Services
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Service Types</li>
+                            <div class="divider"></div>
+                            <li><a href="#"> <span class="glyphicon glyphicon-ok"></span>  Electric Bill</a></li>
+                            <li><a href="#"> <span class="glyphicon glyphicon-ok"></span> Phone and Wifi Bill</a></li>
+                            <li><a href="#"> <span class="glyphicon glyphicon-ok"></span> Water Bill</a></li>
+                            <li><a href="#"> <span class="glyphicon glyphicon-ok"></span> Tax Bill</a></li>
+                            <li><a href="#"> <span class="glyphicon glyphicon-ok"></span> Traffic Bill</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-road"></span> Guide</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Contact Us</a></li>
+                    <li data-target="#login_modal" data-toggle="modal"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+                    <li data-target="#sign_up_modal" data-toggle="modal"><a href="#"><span class="glyphicon glyphicon-check"></span> Sign Up</a></li>
+                     
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar_faq" onmouseleave="faq(0)">
+        <div href="#" class="collapsenav" >
+            <a href="#" class="btnn" id="faq" onmouseup="faq(1)" ><span>▼</span> FAQ</a>
+            <form action="#" class="form-group" role="search" >
+                <div class="col-xs-1"></div>
+                <div class="input-group center col-xs-10">
+                    <span class="input-group-addon"> <i class="glyphicon glyphicon-search"></i> </span>
+                    <input type="text" class="form-control" placeholder="FAQ"> 
+                    <span class="input-group-btn"><button class="btn btn-info">Search</button></span>
+                </div>
+                <div class="col-xs-1"></div>
+            </form>
+        </div>
+    </nav>    
+</nav>  
+  <!-- ##################### BODY HEADER LANDING PAGE################################ -->
+    <div class="sideimage">
+        <!-- <a href="#"><img src="./media/IG_badge1.png" alt=""></a> -->
+       <div class="socialMedia">
+           <h2 class="sideheader">Follow us</h2>
+           <a href="" class="btn"><img class="img-responsive" src="./media/logo/fb.png" alt=""></a>
+           <a href="" class="btn"><img class="img-responsive" src="./media/logo/twt.png" alt=""> </a>
+           <a href="" class="btn"><img class="img-responsive" src="./media/logo/inst.png" alt=""></a>
+           <a href="" class="btn"><img class="img-responsive" src="./media/logo/YT.png" alt=""></a>
+
+       </div>
+    </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="modal_custom_message" id="modal_confirm">
+            <a class="btn close close_messsage dismiss_message" id="">&times</a>
+            <h1 style="margin-left: 30px;">Message from Et-pay</h1>
+            <h3>Dear user,</h3>
+            <h3 id="message_info"></h3>
+            <a href="#" id="resend_email">Click here if you havent gotten any Email from Us?</a><br><br>
+            <button class="btn btn-default btn_modf dismiss_message" id="">Ok</button>
+        </div>
+    </div>
+    <div class="sideimage scrldown"> 
+        <h2 class="glyphicon glyphicon-arrow-down"></h2>
+    </div>
+    <div class="container-fluid main_container">
+        <div class="imgbg_header">
+            <!-- <div class="blueDiagonal col-xs-10"></div> -->
+        </div>
+        <div class="container header_container">
+            <hr class="styled_divider">
+            <div class="header headercss">
+                <div class="col-xs-1"></div>
+                <div class="front_note col-xs-12 col-sm-6">
+                    <div class="amharic">
+                        <h1>ኢቲ-ክፍያ </h1> <h4>በኢትዮጵያ የመጀመሪያው የሞባይል ክፍያ አገልግሎት</h4>
+                    </div>
+                    <!-- <hr class="divider" style="border-top: 1px dashed rgba(155, 152, 152, 0.753); margin: 0;"> -->
+                    <div class="english">
+                        <h1>ET-Pay </h1> <h4>The first Mobile Payment Plaform In Ethiopia</h4>
+                    <div class="button-group">
+                        <button class="btn btn-success" id="login" data-target="#login_modal" data-toggle="modal">Log In</button>
+                        <button class="btn btn-default" id="sign_up" data-target="#sign_up_modal" data-toggle="modal">Sign Up</button>
+                    </div>
+                    </div>
+                </div>
+               
+            </div>
+            <hr class="styled_divider">
+        </div>
+    <!-- ########################^ ^  ^ ^ ^  END ^ ^ ^ ^ ############################# -->
+    <!-- ############################################ ################################ -->
+    <!-- ######################### BODY Second part ###################################### -->
+    <div class="container-fluid abdomen">
+        <div class="container-fluid bodydividerup">
+            <div class="line"></div>
+            <div class="line"></div>
+            <!-- <div class="line" ></div> -->
+        </div>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+     <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+        <div class="col-xs-12 col-sm-12 side_right">
+            
+            <img src="./media/logo.png" alt="" class="img-responsive img_log">
+            <!-- <div class="col-xs-3 col-sm-4"></div> -->
+            <div class="quick_info">
+                <ul class="amharic">
+                    <li> <span class="glyphicon glyphicon-ok"></span> ለአጠቃቀም ቀላል</li>
+                    <li> <span class="glyphicon glyphicon-ok"></span> ፈጣን</li>
+                    <li> <span class="glyphicon glyphicon-ok"></span> አስተማማኝ</li>
+                </ul>
+                <ul class="english">
+                    <li><span class="glyphicon glyphicon-ok"></span> Easy To Use</li>
+                    <li><span class="glyphicon glyphicon-ok"></span>  Fast </li>
+                    <li><span class="glyphicon glyphicon-ok"></span>  Reliable </li>
+                </ul>
+            </div>
+            
+        </div>
+        <h3 class="stars col-xs-12" style="text-align: center;"> 
+            <span >&#9734;</span>
+            <span >&#9734;</span>
+            <span >&#9734;</span>
+            <span >&#9734;</span>
+            <span >&#9734;</span>
+        </h3>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+
+        <div class="container-fluid servicecontainer">
+            <div id="services" class="jumbotron xsfonts">
+                <h1  style="text-align: center;">Our Services Include</h1 id>
+                <div class="container-fluid serviceclass">
+                    <div class="electric col-sm-4 col-xs-12 xsfonts">
+                        <h2>Paying your electric bill from home</h2>
+                        <img src="./media/elect.png" alt="" class="img-responsive">
+                        <h4>The ET-pay system will enable users pay the electric 
+                            bills of their monthly charge with their <em>Smart Phones</em>
+                            or <em>Computers</em> by using your <em>ATM</em>
+                        </h4>
+                        <a href="#" class="btn btn-primary"> Read More </a>
+                    </div>
+                    <div class="phone col-sm-4 col-xs-12 xsfonts">
+                        <h2>Paying your phone and Wifi bill from home</h2>
+                        <img src="./media/phonebill2.png" alt="" class="img-responsive">
+                        <h4>why wait in line to pay for a phone or wifi bill?
+                            You can easily sign-up and log-in to our system and
+                            pay the amount you owe the telecom using your <em>ATM.</em>
+                        </h4>
+                        <a href="#" class="btn btn-primary"> Read More </a>
+                    </div>
+                    <div class="water col-sm-4 col-xs-12 xsfonts">
+                        <h2>Paying your Water bill from home</h2>
+                        <img src="./media/water.png" alt="" class="img-responsive">
+                        <h4>why wait in line to pay for a water bill?
+                            You can easily sign-up and log-in to our system and
+                            pay the amount you owe using your <em>ATM.</em>
+                        </h4>
+                        <a href="#" class="btn btn-primary"> Read More </a>
+                    </div>
+                    <div class="col-sm-12 col-md-12"></div>
+                    <div  class="col-sm-2 col-md-2""></div>
+                    <div class="tax col-xs-12 col-sm-4  col-md-4 xsfonts">
+                        <h2>Paying your Tax bill from home</h2>
+                        <img src="./media/tax2.png" alt="" class="img-responsive">
+                        <h4>why wait in line to pay for your TAX bill?
+                            You can easily sign-up and log-in to our system and
+                            pay the amount you owe using your <em>ATM.</em>
+                        </h4>
+                        <a href="#" class="btn btn-primary"> Read More </a>
+                    </div>
+                    <div class="traffic col-xs-12   col-sm-4  col-md-4 xsfonts" >
+                        <h2>Paying your Traffic Fine from home</h2>
+                        <img src="./media/traffic.png" alt="" class="img-responsive" style="width: 260px;">
+                        <h4>why wait in line to pay for your Traffic Fine?
+                            You can easily sign-up and log-in to our system and
+                            pay the amount you owe using your <em>ATM.</em>
+                        </h4>
+                        <a href="#" class="btn btn-primary"> Read More </a>
+                    </div>
+                    <div class="col-sm-2 col-md-2"></div>
+                </div>
+            </div>
+        </div>
+
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+    <!-- ################################bodydividerdn############################# -->
+        <div class="container-fluid bodydividerdn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <!-- <div class="line"></div> -->
+        </div>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+    <!-- #################################jcontainer ############################ -->
+
+        <div class="container-fluid jcontainer">
+            <hr class="styled_divider">
+            <div class="container jumbotron">
+                <h2 class="text-center" style="font-weight: 900;">With Your Et-pay account You can. . .</h2>
+                <div class="carousel slide" id="carousETpay" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousETpay" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousETpay" data-slide-to="1"></li>
+                        <li data-target="#carousETpay" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="item active">
+                            <span class="carheaders"> <h2>Avoid long waiting time for service payments</h2></span>
+                            <img class="img-responsive" src="./media/queue.jpg" alt="Queue">
+                        </div>
+                  
+                        <div class="item">
+                            <span class="carheaders"> <h2>Pay From Anywhere at Anytime Using Your Phone or Computer</h2></span>
+                            <img class="img-responsive"  src="./media/tools.jpg" alt="tools">
+                        </div>
+                      
+                        <div class="item">
+                            <span class="carheaders"> <h2>Save Time, Energy and Money</h2></span>
+                            <img class="img-responsive" src="./media/save.jpg" alt="save">
+                        </div>
+                      </div>
+                      <a class="left carousel-control" href="#carousETpay" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousETpay" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                </div>
+            </div>
+            <hr class="styled_divider">
+        </div>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+    <!-- #################################Guide####################################### -->
+        <div class="container guide" style="background-image: url(./media/qt11.png);">
+            <h2>How ET-Pay Works</h2>
+           <div class="contianer stack">
+                <div class="register col-xs-10 content">
+                    <h2 class="guidetitle"><span class="glyphicon glyphicon-edit"></span> Register and Log-In</h2>
+                    <ul class="desc col-lg-12">
+                        <li> <span class="glyphicon glyphicon-question-sign"></span> You need an ATM from any bank. Do you have one?</li >
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Click on the sign-up button and register using the specified
+                                guide.
+                        </li>
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Enter all the required information and you will recieve a
+                                confirmation SMS with your Log In password.
+                        </li>
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Use that password to Log In into your account</li>
+                    </ul>
+                </div>
+                <div class="profile col-xs-10 content">
+                    <h2 class="guidetitle"><span class="glyphicon glyphicon-edit"></span> Once You're in Your profile</h2>
+                    <ul class="desc col-lg-12">
+                        <li> <span class="glyphicon glyphicon-question-sign"></span> You need an ATM from any bank. Do you have one?</li >
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Click on the sign-up button and register using the specified
+                                guide.
+                        </li>
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Enter all the required information and you will recieve a
+                                confirmation SMS with your Log In password.
+                        </li>
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Use that password to Log In into your account</li>
+                    </ul>
+                </div>
+                <div class="security col-xs-10 content">
+                    <h2 class="guidetitle"><span class="glyphicon glyphicon-edit"></span> For More Security . . . </h2>
+                    <ul class="desc col-lg-12">
+                        <li> <span class="glyphicon glyphicon-question-sign"></span> You need an ATM from any bank. Do you have one?</li >
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Click on the sign-up button and register using the specified
+                                guide.
+                        </li>
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Enter all the required information and you will recieve a
+                                confirmation SMS with your Log In password.
+                        </li>
+                        <li> <span class="glyphicon glyphicon-ok-circle"></span> Use that password to Log In into your account</li>
+                    </ul>
+                </div>
+           </div>
+           <div class="button-group guide_btn">
+                <a onclick="stackslid(0);" class="btn "> <span class="glyphicon glyphicon-question-sign"> Next Page</span></a>
+        </div>
+        </div>
+        <div class="container user_query">
+            <div class="frame">
+                <div class="tools">
+
+                </div>
+            </div>
+            <div class="hello_guy col-xs-5 col-lg-3">
+                <img src="./media/welcome.png" alt="" class="img-responsive">
+                <div class="shadow"></div>
+            </div>
+            <form class="dialog col-xs-6">
+                <h4>Hello There! I am your Et-Pay Assitant If You Have Any Query or Comment Email Me, Ok?
+                    Good. . . use the box below and hit send after you finish.
+                </h4>
+                <div class="form-group form-inline">
+                    <label for="Email">E-mail: </label>
+                    <input type="email" name="Email" placeholder="Your Email"  class="form-control em_input" required>
+                </div>
+                <div class="form-group">
+                    <label for="commnets">Comments: </label>
+                    <textarea name="" id="" cols="30" rows="5" class="form-control" required></textarea>
+                </div>
+                <input type="submit" 
+                style="width: 100px; align-self: center; background-color: black; color: gold; border-radius: 10px; margin-top: -10px;" 
+                value="Send">
+            </form>
+        </div>
+
+        <div class="container download">
+            <div class="jumbotron cont">
+                <p1 class="col-xs-12 col-sm-4"> Download Et-Pay</p1> 
+               <button class="btn btn-success col-xs-6 col-sm-4"><img src="./media/gplay.png" alt="">Download On PlayStore</button>
+               <button class="btn btn-success col-xs-6 col-sm-4" ><img  src="./media/apple logo.png" alt=""> Download On AppStore</button>
+            </div>
+        </div>
+
+    </div> 
+    <div class="container" style="position: relative; z-index: 100; background-color: white;">
+        <q>
+            <span><img src="./media/openq.png" style="height: 20px; width: 30px; position: relative; top: -10px;" alt=""></span> 
+            <p2>  Do not be anxious about tomorrow, for tomorrow will be anxious for itself. 
+                Let the day's own trouble be sufficient for the day.</p2> 
+                <span><img src="./media/closeq.png" style="height: 20px; width: 30px; position: relative; top: -10px;" alt=""></span> 
+                <em style="font-size: 18px;">Jesus Christ</em>
+        </q>
+    </div>
+    </div>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+    <!-- #################################Foooteer####################################### -->
+    <footer class="container-fluid btmnav">
+        <h2>ET-Pay</h2>
+            <div class="btmlist">
+                <h4>Company</h4>
+                <a href="#">About Et-Pay</a>
+                <a href="#">F.A.Q</a>
+                <a href="#">Other Products</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="btmlist">
+                <h4>Learn More</h4>
+                <a href="#">Blog</a>
+                <a href="#">ET-Pay</a>
+                <a href="#">ATM</a>
+                <a href="#">Mobile Payment</a>
+            </div>
+            <div class="btmlist">
+                <h4>Contact Us</h4>
+                <a href="#">Email</a>
+                <a href="#">Phone</a>
+                <a href="#">Social Media</a>
+                <a href="#">In Person</a>
+            </div>
+        </footer>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+    <!-- #################################Modals####################################### -->
+    <div class="modal" id="login_modal">
+        <div class="modal-dialog">
+            <div class="modal-content login_modal">
+                <div class="modal-header login_modal_header">
+                    <button class="close" data-dismiss="modal">&times</button>
+                    <h4>Log in</h4>
+                    <img class="img-responsive" src="./media/login.png" alt="">
+                </div>
+                <div class="modal-body login_modal_body">
+                    <form action="./classes-ctrl/log_in.php" method="POST" class="form-group login_form" id="login_form_id" target="_blank">
+                        <!-- onsubmit="return login_val()" -->
+                        <div class="input-group">
+                            <span id="login_user_icon" class="glyphicon glyphicon-user input-group-addon addons"></span>
+                            <input id="login_username_id" type="text" class="form-control input_modf" name="login_username"
+                            data-toggle="popover" title="Username" data-content="Your username must be atleast 10 characters long. Use alphanumerics and - only"
+                            placeholder="User Name" maxlength="25" required>
+                        </div>
+                        <div class="input-group">
+                            <span id="login_ATM_icon"  class="glyphicon glyphicon glyphicon-transfer input-group-addon addons"></span>
+                            <input id="login_ATM_id" type="text" class="form-control input_modf" placeholder="ATM Number"  pattern="[0-9]"
+                            data-toggle="popover" title="Remember!" data-content="You should enter a 16 digit number only! " name="login_atm"
+                            minlength="16" maxlength="16" required">
+                        </div>
+                        <div class="input-group">
+                            <span id="login_password_icon"  class="glyphicon glyphicon-lock input-group-addon addons"></span>
+                            <span class="form-group">
+                                <input id="login_password_id" type="password" class="form-control input_modf"  name="login_password"
+                                data-toggle="popover" title="Password" data-content="Your password must be atleast 10 characters long. Use alphanumerics and - only"
+                                placeholder="Password"   minlength="10" maxlength="10" required>
+                                <span style="color: gold;" id="login_password_feedbak" class="glyphicon glyphicon-eye-open form-control-feedback addons"></span>
+                            </span>
+                        </div>
+                        <div id="login_false">
+                            <span style="color: gold; text-align: center;"><h3 id="login_failed_error_message" style="color: gold; text-shadow: 0px 1px 15px rgb(215, 247, 37); font-weight: 900;">Sorry, this user does not exist</h3></span>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" id="log_users_in" class="btn btn-default btn_modf">Log In</button>
+
+                            <label for="checkbox">
+                                <input type="checkbox" name="remember_me" id="cookie_checkbox" > Remember Me <label style="color: black;" id="label_for_popover" data-toggle="popover" title="Attention" data-content="Only check this if your using this platform on your personal devices." for=""></label>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer login_modal_footer">
+                   <a href="#" style="color: gold;">Lost your password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ######################################################### sign up ######################################################## -->
+    <!-- ######################################################### sign up ######################################################## -->
+    <div class="modal" id="sign_up_modal">
+        <div class="modal-dialog modal-lg">
+            <form action="./classes-ctrl/sign_up.php" method="POST" class="form-group" id="signUp_form_id"  name="form_for_sign_up">
+                <!-- onsubmit="return sign_up_val() is on the Ajax.js file" -->
+                <div class="modal-content sign_up_modal">
+                    <div class="modal-header sign_up_modal_header">
+                        <button class="close" data-dismiss="modal">&times</button>
+                        <h4>Sign up</h4>
+                        <img class="img-responsive" src="./media/sign-up.png" alt="">
+                        <hr style="    border-top: 1px solid rgba(255, 255, 255, 0.527); width: 100%;">
+                        <h4 style="font-size: 15px; margin: 0; text-align: left;" >All fields must be filled in!</h4>
+                    </div>
+                    <div class="modal-body sign_up_modal_body">
+                        <div class="form-inline">
+                            <label for="new_user_name" class="control-label label_modf">First Name: <span></span></label>
+                            <input type="text" name="new_user_name" placeholder="Your name" class="form-control input_modf name_class"
+                            data-toggle="popover" title="Attention!" data-content="Please only enter letters with no spaces in between"
+                            maxlength="25" required>
+                        </div>
+                        <div class="form-inline"> 
+                            <label for="new_user_fathers_name" class="control-label label_modf">Fathers Name: </label>
+                            <input type="text" name="new_user_fathers_name" placeholder="Your Father's name" class="form-control input_modf name_class" 
+                            data-toggle="popover" title="Attention!" data-content="Please only enter letters with no spaces in between"
+                            maxlength="25" required>
+                        </div>
+                        <div class="form-inline"> 
+                            <label for="new_user_last_name" class="control-label label_modf">Last Name: </label>
+                            <input type="text" name="new_user_last_name" placeholder="Your Last name" class="form-control input_modf name_class" 
+                            data-toggle="popover" title="Attention!" data-content="Please only enter letters with no spaces in between"
+                            maxlength="25" required>
+                        </div>
+                        <div class="form-inline"> 
+                            <label for="new_user_ATM" class="control-label label_modf">ATM Number: </label>
+                            <input type="number" name="new_user_ATM" placeholder="xxxx xxxx xxxx xxxx" data-toggle="popover" title="Attention!"
+                            data-content="Please Enter 16 digit number only" class="form-control input_modf number_class" minlength="16"  maxlength="16" required>
+                        </div>
+                        <div class="form-inline"> 
+                            <label for="new_user_ATM_pin" class="control-label label_modf">ATM PIN: </label>
+                            <input type="password" name="new_user_ATM_pin" placeholder="xxxx"  data-toggle="popover" title="Attention!"
+                            data-content="Please Enter 4 digit number only" class="form-control input_modf number_class" maxlength="4" required>
+                        </div>
+                        <div class="form-inline"> 
+                            <label for="new_user_CVV" class="control-label label_modf">CVV: 
+                                <span style="color: black;"><a href="#" style="font-size: 15px; color: wheat;" id='cvv_popover' data-toggle="popover" 
+                                    data-content=" <div style='width: 200px; height: auto; top:-100px !important; text-overflow: ellipsis; word-wrap: break-word;'>
+                                        <h3>What is CVV?</h3>
+                                        <p>CVV is a 3 (three) digit number at the back of your debit card as shown in the picture</p>
+                                        <img src='./media/CVV.png' alt='CVV picutre' class='img-responsive'>
+                                    </div> ">
+                                    what is cvv?</a></span></label>
+                                   
+                            <input type="number" name="new_user_CVV" placeholder="---"  data-toggle="popover" title="Attention!"
+                            data-content="Please Enter 3 digit number only" class="form-control input_modf number_class" maxlength="3" required>
+                        </div>
+
+                        <div class="form-inline"> 
+                            <label for="new_user_expdate" class="control-label label_modf">Exp date:
+                                 <span style="color: black;"><a style="font-size: 15px; color: wheat;" href="#" id='exp_popover' data-toggle="popover" 
+                                    data-content="<div style='width: 200px; height: auto; top:-100px !important; text-overflow: ellipsis; word-wrap: break-word;'>
+                                    <h3>What is Exp Date?</h3>
+                                    <p>Exp date is the expiration date printed on your debit card as shown in the picture</p>
+                                    <img src='./media/expdate.png' alt='CVV picutre' class='img-responsive'>
+                                </div>">what's Exp. date?</a></span> </label>
+                            <input type="text" name="new_user_expdate" placeholder="00/00"  data-toggle="popover" title="Attention!"
+                            class="form-control input_modf" maxlength="5" data-toggle="popover" title="Attention!"
+                            data-content="Please Enter the 4(four) digit date on the card in '00/00 format' " required>
+                        </div>
+
+                        <div class="form-inline">
+                            <label for="new_user_bank_name" class="control-label label_modf">Bank name: </label>
+                            <select name="new_user_bank_name" id="new_user_bank_name" class="form-control"title="Attention!"
+                            data-content="Please Select your bank" class="form-control input_modf">
+                                <option value="void">--Select your bank--</option>
+                                <option value="Abay Bank">Abay Bank S.C.</option>
+                                <option value="Abyssinia Bank">Abyssinia Bank</option>
+                                <option value="Addis International Bank">Addis International Bank</option>
+                                <option value="Awash International Bank">Awash International Bank</option>
+                                <option value="Berhan International Bank">Berhan International Bank </option>
+                                <option value="Bunna International Bank">Bunna International Bank </option>
+                                <option value="CBE">Commercial Bank of Ethiopia </option>
+                                <option value="CBO">Cooperative Bank of Oromia(s.c.) </option>
+                                <option value="Dashen Bank">Dashen Bank </option>
+                                <option value="Debub Global Bank">Debub Global Bank </option>
+                                <option value="Enat Bank">Enat Bank </option>
+                                <option value="Lion International Bank">Lion International Bank </option>
+                                <option value="Nib International Bank">Nib International Bank </option>
+                                <option value="Oromia International Bank">Oromia International Bank </option>
+                                <option value="United Bank">United Bank </option>
+                                <option value="Wegagen Bank">Wegagen Bank </option>
+                                <option value="Zemen Bank">Zemen Bank </option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-inline">
+                            <label class="control-label label_modf" style="font-size: 18px; margin: 0; text-align: left; width: 100%;" >
+                            Very Important Note: We need your email below for payment confirmations and verifications</label>
+                        </div>
+                        <div class="form-inline"> 
+                            <label for="new_user_Email" class="control-label label_modf">Email: </label>
+                            <input type="email" name="new_user_Email" placeholder="Email" class="form-control input_modf" 
+                            data-toggle="popover" title="Attention!" data-content="Please enter a proper email fromat:- example@gmail.com"
+                            maxlength="70" required>
+
+                            <label for="new_user_Email_conf" class="control-label label_modf">Re-Enter Email: </label>
+                            <input type="email" name="new_user_Email_conf" placeholder="Re-Enter Email" class="form-control input_modf" 
+                            data-toggle="popover" title="Attention!" data-content="Please enter a proper email fromat:- example@gmail.com"
+                            maxlength="70" required>
+                            <label id="catch_email_error" 
+                            data-toggle="popover" title="Attention!" data-content="The two emails do not match"></label>
+
+                        </div>
+                        <div class="form-inline">
+                            <label class="control-label label_modf" style="font-size: 18px; margin: 0; text-align: left; width: 100%;">
+                                Note : please fill in your address below</label>
+                            <label for="new_user_city" class="control-label label_modf">City: </label>
+                            <input type="text" name="new_user_city" placeholder="city" class="form-control input_modf name_class" 
+                            data-toggle="popover" title="Attention!" data-content="Please use letters only" maxlength="25" required>
+
+                            <label for="new_user_subcity" class="control-label label_modf">Sub-city: </label>
+                            <input type="text" name="new_user_subcity" placeholder="sub-city" class="form-control input_modf name_class" 
+                            data-toggle="popover" title="Attention!" data-content="Please use letters only" maxlength="25" required> 
+
+                            <label for="new_user_woreda" class="control-label label_modf">Woreda: </label>
+                            <input type="number" name="new_user_woreda" placeholder="woreda" class="form-control input_modf number_class" 
+                            data-toggle="popover" title="Attention!" data-content="Please use numbers only" maxlength="25" required> 
+                            
+
+                            <label for="new_user_phone_number" class="control-label label_modf">Phone Number: </label>
+                            <div class="input-group">
+                                <span class="input-group-addon phone_num_addon">+2519</span>
+                                <input type="tel" name="new_user_phone_number" placeholder="Phone Number" class="form-control input_modf number_class" 
+                                data-toggle="popover" title="Attention!" data-content="Please use numbers only" maxlength="20" required>    
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+                    <div class="modal-footer sign_up_modal_footer">
+                        <div class="button-group">
+                            <button type="button" name="sign_users_up" class="btn btn-default btn_modf" id="sign_users_up">Sign Up </button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <!-- ############################################ ################################ -->
+    <!-- ############################################ ################################ -->
+    <!-- ######################################################################## -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="./js/jquery-main-script/jquery-3.4.1.min.js" ></script>
+  <script src="./js/bs-scripts/bootstrap.min.js" ></script>
+  <script src = "./js/proc-welcome.js"></script>
+  <script src = "./js/SignUp-Ajax.js"></script>
+  <script src="./js/logIn-Ajax.js"></script>
+</body>
+</html>
+<!-- https://getbootstrap.com/docs/3.3/components/ -->
+<!-- https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp-->

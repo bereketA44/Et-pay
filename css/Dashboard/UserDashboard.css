@@ -1,0 +1,411 @@
+@font-face {
+    font-family: Artistic;
+    /* src: url(/fonts/ArtisticFriend-Regular.woff2); */
+    src: url(../../fonts/ArtisticFriend-Regular.woff2);
+    font-display: swap; /* Read next point */  
+    unicode-range: U+000-5FF; /* Download only latin glyphs */
+}
+@font-face {
+    font-family: fonts_custom;
+    src: url(../../fonts/Raleway\ Thin.ttf);
+    font-display: swap; /* Read next point */  
+    unicode-range: U+000-5FF; /* Download only latin glyphs */
+ }
+ @font-face {
+    font-family: 'Optima';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../fonts/OPTIMA.woff);
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: fonts_custom;
+}
+body{
+    font-family: fonts_custom;
+}
+
+/* *********************************************Loading Gears *************************************************** */
+#loader{
+    position: fixed;
+    text-align: center;
+    top: 45% !important;
+    left: 48%;
+    margin-left: -40px;
+    margin-top: -40px;
+    opacity: 1 !important;
+    z-index: 9999;
+}
+#loader>.gears {
+    display: flex;
+    flex-direction: row;
+}
+.gears>.big {
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    transform: rotate(60deg);
+    animation: page 8s infinite linear;
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+}
+.gears>.small{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: -30px;
+    left: -20px;
+    animation: page1 8s infinite linear;
+}
+#gearM1, #gearM2 {
+    margin-left: -30px;
+    font-size: 30px;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes page {
+    0% {
+        transform: rotate(0deg);
+    }
+    /* 50% {
+        transform: rotate(180deg)
+    } */
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes page1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    /* 50% {
+        transform: rotate(180deg)
+    } */
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+/* ********************************************************************************************************** */
+.container-fluid{
+    height: 100%;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    overflow-x: hidden;
+    white-space: nowrap;
+
+}
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+.menu-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 60px;
+    /* background-color: #222222; */
+    background-color: #2a2038;
+    z-index: 1100;
+    margin-left: 230px;
+    padding-top: 10px;
+    transition: margin-left .5s linear;
+    -webkit-transition: margin-left .5s linear;
+    -moz-transition: margin-left .5s linear;
+    -ms-transition: margin-left .5s linear;
+    -o-transition: margin-left .5s linear;
+}
+#menuToggle{
+    display: none;
+    /* margin-top: -30px; */
+}
+.notif-elements{
+    width: auto;
+    margin-left: auto;
+    /* margin-top: -20px; */
+}
+.notif-elements>a{
+    color: rgb(204, 162, 57); 
+    font-size: 25px;
+    margin: 0px 10px -10px 10px;
+    text-decoration: none;
+    transition: transform .3s linear;
+    -webkit-transition: transform .3s linear;
+    -moz-transition: transform .3s linear;
+    -ms-transition: transform .3s linear;
+    -o-transition: transform .3s linear;
+}
+.notif-elements>a:hover{
+    color: gold;
+    cursor: pointer;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.searchbar{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.input-group[class*=col-] {
+    float: left;
+}
+.logout-div{
+    clear: none;
+    float: right;
+}
+.btn_modf {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 5px 10px 5px 10px;
+    margin-top: -5px;
+    font-weight: 900;
+    background-color: #2a2038;
+    color: goldenrod;
+    border: 1px solid rgba(255, 217, 0, 0.555) !important;
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+}
+.logout-div>a{
+    float: right;
+    background-color: goldenrod;
+    color: #2a2038;
+}
+.btn_modf:hover{
+    background-color: rgb(72, 255, 0);
+    color: #222222;
+}
+.sidebar{
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 230px;
+    height: 100%;
+    white-space: normal;
+
+    /* background-color: #2F323A; */
+    background-color: #171520;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 1200;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: black 1px 2px 10px;
+    transition: width .5s linear, background-color 1s linear;
+    -webkit-transition: width .5s linear, background-color 1s linear;
+    -moz-transition: width .5s linear, background-color 1s linear;
+    -ms-transition: width .5s linear, background-color 1s linear;
+    -o-transition: width .5s linear, background-color 1s linear;
+}
+/* *********************************************scrollbar for sidebar *************************************************** */
+/* width */
+.sidebar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color:#171520;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+  
+.sidebar::-webkit-scrollbar {
+    cursor: grab;
+    width: 8px;
+    background-color: #171520;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    cursor:pointer;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(250, 243, 202);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(209, 189, 73);
+}
+/* ************************************************************************************************************* */
+
+.sidebar-top{
+    border-bottom: rgba(245, 245, 245, 0.219) 1px solid;
+    width: 100%;
+}
+.sidebar>.sidebar-top>.brand-name>.brand{
+    font-family: Artistic;
+    color: gold;
+    font-size: 80px;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.sPhonebrand{
+    display: none;
+    position: relative;
+    vertical-align: middle;
+    font-family: Artistic;
+    color: gold;
+    font-size: 70px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: -5px;
+}
+
+.sidebar>.toggle-div>.sidebar-toggle{
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+    top: 50%;
+    font-size: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+    z-index: 1200;
+    transition: transform .3s linear ;
+    -webkit-transition: transform .3s linear ;
+    -moz-transition: transform .3s linear ;
+    -ms-transition: transform .3s linear ;
+    -o-transition: transform .3s linear ;
+}
+.sidebar>.toggle-div>.sidebar-toggle:hover{
+    transform: scale(1.2);
+    text-shadow: whitesmoke 1px 1px 6px;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.sidebar>.sidebar-top>.user-logo-div>.user-logo{
+    width: 60px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textClass{
+    font-family:fonts_custom, sans-serif;
+    text-align: center;
+}
+.sidebar-middle{
+    width: 100%;
+    margin-top: 20px;
+   
+}
+.user-elements, .user-payments{
+    padding-left:20px;
+    border-bottom: rgba(245, 245, 245, 0.219) 1px solid;
+}
+.user-elements>.profile{
+    margin-left: 30px;
+}
+.sidebarTexts{
+    color: thistle;
+    font-size: 23px;
+    font-weight: 900;
+    text-decoration: none;
+    width: 100%;
+    padding : 10px 3px 10px 0px;
+    margin-bottom: 5px;
+}
+.profile{
+    cursor: pointer;
+}
+.profile>a {
+    color: thistle;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.user-elements>span:hover >a, 
+.user-elements>span:hover,
+.user-payments>div:hover>a,
+.user-payments>div:hover,
+.user-activities>div:hover>a,
+.user-activities>div:hover {
+    color: teal;
+    background-color: thistle;
+}
+.user-payments>.sideTitle, .user-elements>.sideTitle{
+    color: gold;
+    font-size: 23px;
+    font-weight: 900;
+    padding : 10px 3px 10px 0px;
+    margin-bottom: 5px;
+}
+.user-payments>p1, .user-elements>p1{
+    color: gold;
+}
+.user-payments>.profile{
+    margin: 0;
+    padding: 5px;
+    margin-left: 15px ;
+}
+.user-activities>.sidebarTexts{
+    padding: 0;
+}
+.content{
+    position: relative;
+    background-color: #EAEAEA;
+    margin-right: -15px;
+    margin-left: -15px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.port{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 240px;
+    /*padding-right: 100px;
+    */padding-top: 70px;
+    overflow-x: auto;
+    transition: margin-left .5s linear, width .5s linear;
+    -webkit-transition: margin-left .5s linear, width .5s linear;
+    -moz-transition: margin-left .5s linear, width .5s linear;
+    -ms-transition: margin-left .5s linear, width .5s linear;
+    -o-transition: margin-left .5s linear, width .5s linear;
+    width: 95vw;
+}
+@media (max-width: 1026px){
+    .searchbar, .offsetSpan{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .notif-elements>a{
+        display: none;
+    }
+    /* .notif-elements:first-child{
+        display: block;
+    } */
+    #menuToggle{
+        display: inline-block;
+        margin-left: -3px;
+    }
+    .sPhonebrand{
+        display: inline-block;
+    }
+    #gearM1, #gearM2 {
+        color: rgb(255, 255, 255);
+        text-shadow: seashell 1px 1px 10px;
+        margin-left: -40px;
+    }
+
+}

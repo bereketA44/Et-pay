@@ -1,0 +1,95 @@
+ Gotham-Light, sans-serif;
+     font-family: 'Comfortaa', 'Century Gothic', Arial;
+
+
+     Major browsers use the following prefixes:
+
+-webkit- Chrome, Safari, newer versions of Opera, almost all iOS browsers,
+-moz- Firefox,
+-o- Old versions of Opera,
+-ms- Microsoft Edge and Internet Explorer.
+
+
+1. remove nav bottom shadow line
+
+var d =  window.getComputedStyle(modal, null).getPropertyValue("display");
+        let modal = document.getElementById("modal1");
+  ##################################################################################
+    ##################################################################################
+      ##################################################################################
+        ##################################################################################
+          ##################################################################################
+
+woorking modal
+<!-- <div id="myModal" class="container modal"> -->
+        <!-- <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div> -->
+        <!-- <div class="pop">
+            <h3>Hello Berket</h3>
+            <input type="text" class="input-control" placeholder="Emial">
+            <input type="text" class="input-control" placeholder="pass">
+            <button class="Log in" style="width: 70px !important; align-self: center; color: black;">Log IN</button>
+        </div>
+
+    </div> -->
+      ##################################################################################
+        ##################################################################################
+          ##################################################################################
+var modal = document.getElementById("myModal");
+class test {
+    constructor () {
+        var bool;
+    }
+    set(val){
+        this.bool= val
+    }
+}
+let check = new test();
+
+var btn = document.getElementById("login");
+btn.onclick = login;
+function login() {
+    check.set(true);
+    modal.style.display = "block";
+}
+window.onclick = function(event) {
+//    to debug uncommnet the consloe.log
+    // console.log (check.bool)
+    if (event.target != modal ) {
+        if (check.bool == false && !event.target.closest('.modal'))
+            modal.style.display = "none";
+        else
+            check.set(false)
+    }
+  }
+  .modal{
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    box-shadow: black 1px 1px 10px;
+    margin: 10%;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 50%;
+    margin-left: -150px;
+    background-color: #222222a1;
+    padding: 30px;
+}
+.modal>.pop {
+    color: whitesmoke;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+/* .none {
+    display: none;
+} */
+  ##################################################################################
+    ##################################################################################
+      ##################################################################################
+        ##################################################################################
+          ##################################################################################
