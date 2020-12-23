@@ -1,4 +1,4 @@
-# Et-pay PHP payment website with MVC pattern
+# Et-pay payment website with PHP MVC pattern
 
 - Payment website made with HTML CSS Bootstrap javascript Jquery PHP
 
