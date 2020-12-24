@@ -1,6 +1,6 @@
 # Et-pay website with PHP
 
-> payment website made with PHP and MVC pattern.
+> payment website made with PHP and MVC pattern with full authentication.
 
 # Built With
 - PHP 
